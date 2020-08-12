@@ -1,6 +1,6 @@
 {
   "name": "finding-falcone",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
@@ -11,9 +11,7 @@
   },
   "private": true,
   "dependencies": {
-    "@angular-devkit/build-angular": "~0.1000.1",
     "@angular/cli": "~10.0.1",
-    "@angular/compiler-cli": "~10.0.2",
     "@angular/animations": "~10.0.2",
     "@angular/common": "~10.0.2",
     "@angular/compiler": "~10.0.2",
