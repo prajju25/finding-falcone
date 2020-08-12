@@ -1,0 +1,14 @@
+<div clas="row">
+    Select planets you want to search in
+</div>
+<div class="row falcone">
+    <div class="col-2 ml15" *ngFor="let destination of destinations; index as ind">
+        <app-falcone-box [destination]="destination" (selectedEmit)=catchSelected($event)></app-falcone-box>
+    </div>
+    <div class="col-2">
+        Time Taken: {{time}}
+    </div>
+</div>
+<div class="row button">
+    <button class="falcone-button" value="Find Falcone" [disabled]="checkDisabled()" (click)="findFalcone()">Find Falcone</button>
+</div>

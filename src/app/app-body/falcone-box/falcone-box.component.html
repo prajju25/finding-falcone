@@ -1,0 +1,15 @@
+<div class="row">
+  <h6>Destination {{destination?.id}}</h6>
+</div>
+<div class="row planet-dropdown">
+  <select class="dropdown-box" name="destinations" (change)="selectPlanet($event.target)">
+    <option selected hidden>Select Planet</option>
+    <option *ngFor="let option of destination?.planets" [hidden]="option?.disabled" [value]="option?.name">{{option?.name}}</option>
+  </select>
+</div>
+<div class="row vehicle" *ngIf="isDestSelected">
+  <div class="col-12" *ngFor="let vehicle of destination?.vehicles">
+    <input type="radio" id="{{vehicle?.name}}_{{destination?.id}}" name="vehicleRadio_{{destination?.id}}" [disabled]="isDisabledVehicle(vehicle)" (click)="selectVehicle(vehicle)">
+    <label class="vehicle-label" for="{{vehicle?.name}}_{{destination?.id}}" [ngClass]="{'greyed' : isDisabledVehicle(vehicle)}">{{vehicle?.name}} ({{isAvailableVehicle(vehicle)}})</label>
+  </div>
+</div>
